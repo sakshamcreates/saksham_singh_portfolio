@@ -48,7 +48,7 @@ export function SkillsShowcase() {
                   <TabsTrigger
                     key={category}
                     value={category}
-                    className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                    className="cursor-pointer data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
                   >
                     {category}
                   </TabsTrigger>
