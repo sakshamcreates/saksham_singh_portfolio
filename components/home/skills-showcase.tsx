@@ -66,12 +66,18 @@ export function SkillsShowcase() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3, delay: index * 0.05 }}
+                        whileHover={{ y: -4, scale: 1.05 }}
+                        className="group"
                       >
                         <Badge
                           variant="outline"
-                          className="flex items-center gap-2 bg-background px-4 py-2 text-sm transition-colors hover:bg-accent"
+                          className="flex items-center gap-2 bg-background px-4 py-2 text-sm transition-all duration-300 hover:border-primary/50 hover:bg-accent hover:shadow-md hover:shadow-primary/5"
                         >
-                          <TechIcon logoKey={skill.logoKey} name={skill.name} className="h-5 w-5" />
+                          <TechIcon
+                            logoKey={skill.logoKey}
+                            name={skill.name}
+                            className="h-5 w-5 transition-transform duration-300 group-hover:scale-110"
+                          />
                           {skill.name}
                         </Badge>
                       </motion.div>
